@@ -6,6 +6,7 @@ import MerchantDashboard from './pages/MerchantDashboard';
 import HostedPayment from './pages/HostedPayment';
 import PaymentResult from './pages/PaymentResult';
 import ProtectedRoute from './components/ProtectedRoute';
+import PaymentRedirectPage from './pages/PaymentRedirectPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           } />
           <Route path="/payment/:paymentId" element={<HostedPayment />} />
           <Route path="/payment-result" element={<PaymentResult />} />
+          <Route path="/pay" element={<PaymentRedirectPage />} />
         </Routes>
       </div>
     </Router>
