@@ -1,0 +1,6 @@
+/              /index.html   200
+/payment/*     /index.html   200
+/register      /index.html   200
+/login         /index.html   200
+/pay           /index.html   200
+/pay/*         /index.html   200
