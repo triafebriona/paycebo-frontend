@@ -23,6 +23,7 @@ function App() {
           } />
           <Route path="/payment/:paymentId" element={<HostedPayment />} />
           <Route path="/payment-result" element={<PaymentResult />} />
+          <Route path="/payment-finish" element={<PaymentResult />} />
           <Route path="/pay" element={<PaymentRedirectPage />} />
         </Routes>
       </div>
