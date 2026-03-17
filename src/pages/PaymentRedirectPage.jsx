@@ -6,28 +6,23 @@ export default function PaymentRedirectPage() {
   const machineId = searchParams.get('machineId');
 
   useEffect(() => {
-    const redirectToPayment = async () => {
-      if (!machineId) {
-        window.location.href = '/login';
-        return;
-      }
+    if (!machineId) {
+      console.error('Machine ID not found');
+      window.location.href = '/';
+      return;
+    }
 
-      try {
-        window.location.href = '/login';
-      } catch (error) {
-        console.error('Redirect error:', error);
-        window.location.href = '/login';
-      }
-    };
+    console.log(`Redirecting to the payment page for : ${machineId}`);
 
-    redirectToPayment();
+    window.location.href = `http://localhost:3003/pay?machineId=${machineId}`;
+
   }, [machineId]);
 
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
-        <h2 className="text-xl font-semibold mb-2">Mengalihkan ke halaman pembayaran...</h2>
-        <p className="text-gray-600">Harap tunggu sebentar</p>
+        <h2 className="text-xl font-semibold mb-2">Redirecting to the payment page...</h2>
+        <p className="text-gray-600">Please wait a moment</p>
       </div>
     </div>
   );
