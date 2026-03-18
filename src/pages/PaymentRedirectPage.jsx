@@ -14,7 +14,7 @@ export default function PaymentRedirectPage() {
 
     console.log(`Redirecting to the payment page for : ${machineId}`);
 
-    window.location.href = `http://localhost:3003/pay?machineId=${machineId}`;
+    window.location.href = `jovani-stickless-unpetulantly.ngrok-free.dev/pay?machineId=${machineId}`;
 
   }, [machineId]);
 
